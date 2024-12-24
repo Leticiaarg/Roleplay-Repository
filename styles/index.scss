@@ -1,0 +1,31 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+.character {
+    &__container {
+        border: 1px solid;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    &__name {
+        font-weight: bold;
+        text-align: center;
+    }
+    &__card {
+        display: flex;
+        max-width: 400px;
+        flex-direction: column;
+        background-color: bisque;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "id": "2",
+    "name": "demo character",
+    "description": "demo character desscription",
+    "type": "Mago",
+    "img": "media/pjdemo.png",
+    "attributes": {
+        "wisdom": 8,
+        "agility": 7,
+        "intelligence": 9
+    },
+    "skills": {
+        "charm": 9,
+        "stealth": 8,
+        "meditation": 10
+    },
+    "aparience": ""
+}
