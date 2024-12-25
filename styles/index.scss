@@ -28,4 +28,8 @@ header {
         padding: 1rem;
         font-size: 2rem;
     }
+    &__data {
+        display: flex;
+        flex-direction: column;
+    }
 }
