@@ -29,7 +29,26 @@ header {
         font-size: 2rem;
     }
     &__data {
+        transition: 1s;
         display: flex;
         flex-direction: column;
+        height: 0;
+        width: 0;
+        &--open {
+            height: 80%;
+            width: 100%;
+        }
+        &--overview {
+            transition: 1s;
+            display: flex;
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            padding: 4rem;
+            background-color: ghostwhite;
+            height: 80%;
+            width: 80%;
+            flex-direction: column;
+        }
     }
 }

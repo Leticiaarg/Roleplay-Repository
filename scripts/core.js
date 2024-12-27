@@ -5,7 +5,6 @@ RPR.loadPj = async (pjName) => {
     const response = await fetch(`pjs/${pjName}.json`);
     const data = await response.text();
     RPR.pjData.push(JSON.parse(data));
-
     return RPR.pjData;
 };
 
@@ -24,6 +23,7 @@ RPR.loadDataFromPj = (id) => {
     pjId = id-1;
     console.log(pjId);
     document.querySelector('.character__data').innerHTML = `
+        <header><button class="character__overview-button">Overview</button></header>
         <span>id: ${RPR.pjData[pjId].id}</span>
         <span>Name: ${RPR.pjData[pjId].name}</span>
         <h2>Description:</h2>
@@ -55,6 +55,10 @@ setTimeout(() => {
         document.querySelectorAll('.character__card').forEach((elem) => {
             elem.addEventListener('click', (e) => {
                 RPR.loadDataFromPj(e.target.parentElement.id);
+                document.querySelector('.character__data').classList.add('character__data--open');
+                document.querySelector('.character__overview-button').addEventListener('click', (e) => {
+                    document.querySelector('.character__data').classList.add('character__data--overview');
+                });
             });
         });
     }, 250);
